@@ -39,14 +39,14 @@ int main(void)
 	if(!getcwd(pathname,sizeof(pathname)))
  			die("Error Getting Pathname\n");
 
-	printf("Current Working Directory = %s\n",pathname);
+	printf("\nCurrent Working Directory = %s\n",pathname);
 	count = scandir(pathname, &files,file_select,alphasort);
 
 	if(count<=0)
 		die("No Files in this Directory\n");
  
  printf("Files Numbers:%d\n",count);
- printf("-----------------------------------\n");
+ printf("------------------------------------\n");
      for(i=1; i< count+1;++i)
        printf("%s\t",files[i-1] ->d_name);
  printf("\n----------------------------------\n");
